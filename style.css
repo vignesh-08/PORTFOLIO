@@ -34,7 +34,7 @@ body {
 }
 
 body.light {
-  color: #111827;
+  color: #101726;
   --text: #111827;
   --surface: rgba(255,255,255,0.96);
   --surface-strong: rgba(255,255,255,0.98);
