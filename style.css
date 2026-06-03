@@ -834,26 +834,37 @@ img {
   .header-inner {
     flex-wrap: wrap;
     justify-content: space-between;
+    gap: 0.75rem;
+    padding: 0.5rem 0;
   }
 
   .nav-menu {
     position: fixed;
-    top: 80px;
+    top: 72px;
     right: -100%;
-    width: min(260px, 80vw);
-    background: rgba(7,11,22,0.98);
+    width: min(300px, 92vw);
+    background: rgba(7,11,22,0.96);
     backdrop-filter: blur(20px);
     flex-direction: column;
-    gap: 1.1rem;
-    padding: 1.5rem;
+    gap: 1rem;
+    padding: 1.4rem;
     border-left: 1px solid rgba(255,255,255,0.08);
-    transition: right 0.3s ease;
-    min-height: calc(100vh - 80px);
+    transition: right 0.3s ease, opacity 0.3s ease;
+    opacity: 0;
+    visibility: hidden;
+    min-height: calc(100vh - 72px);
     z-index: 140;
   }
 
   .nav-menu.open {
     right: 0;
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .nav-link {
+    padding: 0.9rem 0;
+    font-size: 1rem;
   }
 
   .menu-toggle {
@@ -863,22 +874,90 @@ img {
   .hero {
     padding-top: 7rem;
   }
+
+  .hero-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .hero-actions .btn {
+    width: 100%;
+  }
+
+  .hero-stats {
+    gap: 1rem;
+  }
+
+  .hero-panel {
+    margin-top: 2rem;
+  }
 }
 
 @media (max-width: 520px) {
   .hero-copy h1 {
-    font-size: 2.8rem;
+    font-size: 2.2rem;
   }
 
   .hero-text,
   .section-copy p,
   .panel-item p,
   .feature-card p,
-  .contact-copy p {
+  .contact-copy p,
+  .project-card p,
+  .testimonial-card p {
     font-size: 0.95rem;
   }
 
   .header-actions {
-    gap: 0.5rem;
+    gap: 0.65rem;
+  }
+
+  .site-header {
+    padding: 0.75rem 0;
+  }
+
+  .hero {
+    padding-top: 6.5rem;
+  }
+
+  .hero-panel {
+    padding: 1.5rem;
+  }
+
+  .hero-actions {
+    gap: 0.75rem;
+  }
+
+  .hero-text {
+    margin-bottom: 1.5rem;
+  }
+
+  .hero-actions .btn {
+    font-size: 0.95rem;
+    padding: 0.95rem 1rem;
+  }
+
+  .hero-stats {
+    gap: 0.9rem;
+  }
+
+  .skill-block,
+  .timeline-item,
+  .project-card,
+  .feature-card,
+  .testimonial-card,
+  .cert-card,
+  .service-card,
+  .contact-form {
+    padding: 1.4rem;
+  }
+
+  .section {
+    padding: 4.5rem 0;
+  }
+
+  .contact-details,
+  .social-links {
+    gap: 0.85rem;
   }
 }
